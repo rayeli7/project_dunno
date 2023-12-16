@@ -7,7 +7,7 @@ part 'splash_state.dart';
 
 /// A bloc that manages the state of a Splash according to the event that is dispatched to it.
 class SplashBloc extends Bloc<SplashEvent, SplashState> {
-  SplashBloc(SplashState initialState) : super(initialState) {
+  SplashBloc(super.initialState) {
     on<SplashInitialEvent>(_onInitialize);
   }
 
@@ -16,8 +16,11 @@ class SplashBloc extends Bloc<SplashEvent, SplashState> {
     Emitter<SplashState> emit,
   ) async {
     Future.delayed(const Duration(milliseconds: 3000), () {
-      NavigatorService.popAndPushNamed(
-        AppRoutes.logInScreen,
+      //  NavigatorService.popAndPushNamed(
+      //  AppRoutes.homePage,
+      // );
+      NavigatorService.pushNamedAndRemoveUntil(
+        AppRoutes.homeContainerScreen,
       );
     });
   }

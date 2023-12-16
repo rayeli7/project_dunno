@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 part of 'splash_bloc.dart';
 
 /// Abstract class for all events that can be dispatched from the

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import
+
 import 'package:flutter/material.dart';
 import 'package:dunno/presentation/splash_screen/splash_screen.dart';
 import 'package:dunno/presentation/onboarding_screen/onboarding_screen.dart';

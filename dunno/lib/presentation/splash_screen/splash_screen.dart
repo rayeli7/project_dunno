@@ -4,14 +4,14 @@ import 'package:dunno/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({Key? key}) : super(key: key);
+  const SplashScreen({super.key});
 
   static Widget builder(BuildContext context) {
     return BlocProvider<SplashBloc>(
         create: (context) =>
             SplashBloc(SplashState(splashModelObj: SplashModel()))
               ..add(SplashInitialEvent()),
-        child: SplashScreen());
+        child: const SplashScreen());
   }
 
   @override
@@ -24,7 +24,7 @@ class SplashScreen extends StatelessWidget {
               body: SizedBox(
                   width: double.maxFinite,
                   child: CustomImageView(
-                      svgPath: ImageConstant.imgVector,
+                      imagePath: ImageConstant.imgSplash,
                       height: getVerticalSize(108),
                       width: getHorizontalSize(106),
                       alignment: Alignment.center))));

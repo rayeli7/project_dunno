@@ -3,7 +3,7 @@ class ImageConstant {
   static String imagePath = 'assets/images';
 
   // Splash images
-  static String imgVector = '$imagePath/img_vector.svg';
+  static String imgSplash = '$imagePath/new_logo_sets/splash new.png';
 
   // Cards images
   static String imgNavcardGray10001 = '$imagePath/img_navcard_gray_100_01.svg';

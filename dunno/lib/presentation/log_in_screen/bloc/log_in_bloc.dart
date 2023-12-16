@@ -11,7 +11,7 @@ part 'log_in_state.dart';
 
 /// A bloc that manages the state of a LogIn according to the event that is dispatched to it.
 class LogInBloc extends Bloc<LogInEvent, LogInState> {
-  LogInBloc(LogInState initialState) : super(initialState) {
+  LogInBloc(super.initialState) {
     on<LogInInitialEvent>(_onInitialize);
     on<CreateLoginEvent>(_callLoginDeviceAuth);
   }

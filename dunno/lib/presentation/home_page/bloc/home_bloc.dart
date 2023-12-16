@@ -8,7 +8,7 @@ part 'home_state.dart';
 
 /// A bloc that manages the state of a Home according to the event that is dispatched to it.
 class HomeBloc extends Bloc<HomeEvent, HomeState> {
-  HomeBloc(HomeState initialState) : super(initialState) {
+  HomeBloc(super.initialState) {
     on<HomeInitialEvent>(_onInitialize);
   }
 

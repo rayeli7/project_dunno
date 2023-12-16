@@ -9,11 +9,10 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:dunno/domain/googleauth/google_auth_helper.dart';
 
-// ignore_for_file: must_be_immutable
 class LogInScreen extends StatelessWidget {
-  LogInScreen({Key? key}) : super(key: key);
+  LogInScreen({super.key});
 
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   static Widget builder(BuildContext context) {
     return BlocProvider<LogInBloc>(

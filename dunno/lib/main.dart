@@ -12,11 +12,13 @@ void main() {
     ]),
     PrefUtils().init()
   ]).then((value) {
-    runApp(MyApp());
+    runApp(const MyApp());
   });
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
@@ -32,13 +34,13 @@ class MyApp extends StatelessWidget {
             title: 'dunno',
             navigatorKey: NavigatorService.navigatorKey,
             debugShowCheckedModeBanner: false,
-            localizationsDelegates: [
+            localizationsDelegates: const [
               AppLocalizationDelegate(),
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
-            supportedLocales: [
+            supportedLocales: const [
               Locale(
                 'en',
                 '',

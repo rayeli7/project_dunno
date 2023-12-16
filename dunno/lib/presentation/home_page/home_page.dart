@@ -9,13 +9,13 @@ import 'package:dunno/widgets/app_bar/custom_app_bar.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({super.key});
 
   static Widget builder(BuildContext context) {
     return BlocProvider<HomeBloc>(
         create: (context) => HomeBloc(HomeState(homeModelObj: HomeModel()))
           ..add(HomeInitialEvent()),
-        child: HomePage());
+        child: const HomePage());
   }
 
   @override
@@ -70,7 +70,7 @@ class HomePage extends StatelessWidget {
                                                         getHorizontalSize(24),
                                                     crossAxisSpacing:
                                                         getHorizontalSize(24)),
-                                            physics: BouncingScrollPhysics(),
+                                            physics: const BouncingScrollPhysics(),
                                             itemCount: homeModelObj
                                                     ?.optionsItemList.length ??
                                                 0,

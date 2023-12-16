@@ -10,17 +10,18 @@ import 'package:flutter/material.dart';
 
 // ignore_for_file: must_be_immutable
 class HomeContainerScreen extends StatelessWidget {
-  HomeContainerScreen({Key? key}) : super(key: key);
+  HomeContainerScreen({super.key});
 
   GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 
   static Widget builder(BuildContext context) {
-    var arg =
-        ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+   // var arg =
+     //   ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
     return BlocProvider<HomeContainerBloc>(
         create: (context) => HomeContainerBloc(HomeContainerState(
             homeContainerModelObj: HomeContainerModel(),
-            id: arg[NavigationArgs.id]))
+           // id: arg[NavigationArgs.id]
+            ))
           ..add(HomeContainerInitialEvent()),
         child: HomeContainerScreen());
   }
@@ -39,7 +40,7 @@ class HomeContainerScreen extends StatelessWidget {
                   onGenerateRoute: (routeSetting) => PageRouteBuilder(
                       pageBuilder: (ctx, ani, ani1) =>
                           getCurrentPage(context, routeSetting.name!),
-                      transitionDuration: Duration(seconds: 0))),
+                      transitionDuration: const Duration(seconds: 0))),
               bottomNavigationBar:
                   CustomBottomBar(onChanged: (BottomBarEnum type) {
                 Navigator.pushNamed(
