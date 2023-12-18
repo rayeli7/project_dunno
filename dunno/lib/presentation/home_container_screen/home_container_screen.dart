@@ -8,21 +8,21 @@ import 'package:dunno/presentation/profile_screen/profile_screen.dart';
 import 'package:dunno/widgets/custom_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
-// ignore_for_file: must_be_immutable
+
 class HomeContainerScreen extends StatelessWidget {
   HomeContainerScreen({super.key});
 
-  GlobalKey<NavigatorState> navigatorKey = GlobalKey();
+  final GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 
   static Widget builder(BuildContext context) {
-   // var arg =
-     //   ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
+    // var arg =
+    //   ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
     return BlocProvider<HomeContainerBloc>(
         create: (context) => HomeContainerBloc(HomeContainerState(
-            homeContainerModelObj: HomeContainerModel(),
-           // id: arg[NavigationArgs.id]
+              homeContainerModelObj: HomeContainerModel(),
+              // id: arg[NavigationArgs.id]
             ))
-          ..add(HomeContainerInitialEvent()),
+              ..add(HomeContainerInitialEvent()),
         child: HomeContainerScreen());
   }
 
@@ -33,7 +33,7 @@ class HomeContainerScreen extends StatelessWidget {
         builder: (context, state) {
       return SafeArea(
           child: Scaffold(
-              backgroundColor: appTheme.gray100,
+              backgroundColor: appTheme.black900,
               body: Navigator(
                   key: navigatorKey,
                   initialRoute: AppRoutes.homePage,
@@ -54,8 +54,6 @@ class HomeContainerScreen extends StatelessWidget {
     switch (type) {
       case BottomBarEnum.Home:
         return AppRoutes.homePage;
-      case BottomBarEnum.Card:
-        return AppRoutes.cardsScreen;
       case BottomBarEnum.Activity:
         return AppRoutes.activityScreen;
       case BottomBarEnum.Profile:
@@ -80,7 +78,7 @@ class HomeContainerScreen extends StatelessWidget {
       case AppRoutes.profileScreen:
         return ProfileScreen.builder(context);
       default:
-        return DefaultWidget();
+        return const DefaultWidget();
     }
   }
 }

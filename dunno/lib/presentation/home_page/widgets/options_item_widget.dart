@@ -3,19 +3,17 @@ import 'package:dunno/core/app_export.dart';
 import 'package:dunno/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 
-// ignore: must_be_immutable
+
 class OptionsItemWidget extends StatelessWidget {
-  OptionsItemWidget(
+  const OptionsItemWidget(
     this.optionsItemModelObj, {
-    Key? key,
+    super.key,
     this.onTapOne,
-  }) : super(
-          key: key,
-        );
+  });
 
-  OptionsItemModel optionsItemModelObj;
+  final OptionsItemModel optionsItemModelObj;
 
-  VoidCallback? onTapOne;
+  final VoidCallback? onTapOne;
 
   @override
   Widget build(BuildContext context) {

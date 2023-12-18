@@ -20,7 +20,7 @@ final Map<String, String> enUs = {
   "msg_sign_up_with_google": "Sign up with Google",
 
   // Home Screen
-  "lbl_3_567_12": "\$3,567.12",
+  "lbl_3_567_12": "GHc3,567.12",
   "lbl_bank_to_bank": "Bank To\nBank",
   "lbl_exchange_money": "Exchange Money",
   "lbl_govt_paybills": "Govt.paybills",
@@ -34,19 +34,19 @@ final Map<String, String> enUs = {
   "lbl_send_money2": "Send money",
   "lbl_to_acc_to_acc": "To acc to acc",
   "lbl_total_balance": "Total Balance",
-  "lbl_welcome_back": "Welcome Back!",
+  "lbl_welcome": "Akwaaba ...",
 
   // Cards Screen
   "lbl_your_cards": "Your Cards",
 
   // Card Details Screen
-  "lbl_10_00": "-\$10.00",
+  "lbl_10_00": "-GHc10.00",
   "lbl_10_00_am": "10:00 am",
-  "lbl_15_00": "-\$15.00",
+  "lbl_15_00": "-GHc15.00",
   "lbl_1_41_pm": "1:41 pm",
-  "lbl_30_00": "+\$30.00",
+  "lbl_30_00": "+GHc30.00",
   "lbl_3_41_pm": "3:41 pm",
-  "lbl_50_35": "-\$50.35",
+  "lbl_50_35": "-GHc50.35",
   "lbl_6_46_pm": "6:46 pm",
   "lbl_adom": "Adom",
   "lbl_food": "Food",
@@ -56,7 +56,7 @@ final Map<String, String> enUs = {
   "lbl_today": "Today",
 
   // Activity Screen
-  "lbl_105_00": "\$105.00",
+  "lbl_105_00": "Ghc105.00",
   "lbl_16_23_jan": "16 – 23 Jan",
   "lbl_17": "17",
   "lbl_18": "18",
@@ -65,7 +65,7 @@ final Map<String, String> enUs = {
   "lbl_21": "21",
   "lbl_22": "22",
   "lbl_23": "23",
-  "lbl_2_366": "\$2,366",
+  "lbl_2_366": "Ghc2,366",
   "lbl_expenses": "Expenses",
   "lbl_fri": "Fri",
   "lbl_income": "Income",
@@ -98,7 +98,7 @@ final Map<String, String> enUs = {
   "lbl_30_10_2020": "30/10/2020",
   "lbl_30_11_2020": "30/11/2020",
   "lbl_30_12_2020": "30/12/2020",
-  "lbl_480": "\$480",
+  "lbl_480": "Ghc480",
   "lbl_all_time": "All time",
   "lbl_amount": "Amount",
   "lbl_december": "December",
@@ -136,8 +136,8 @@ final Map<String, String> enUs = {
   "msg_enter_your_account2": "Enter Your Account Password To Send",
 
   // Total Screen
-  "lbl_1168_25": "\$1168.25",
-  "lbl_2_00": "\$2.00",
+  "lbl_1168_25": "Ghc1168.25",
+  "lbl_2_00": "Ghc2.00",
   "lbl_from_suzane": "From Suzane...",
   "lbl_send": "SEND",
   "lbl_vat": "Vat",
@@ -195,7 +195,7 @@ final Map<String, String> enUs = {
   "msg_pay_bill_of_this": "Pay bill of this month",
 
   // Electric Bill Screen
-  "lbl_0": "\$0",
+  "lbl_0": "Ghc 0",
   "lbl_address": "Address",
   "lbl_address_here": "Address Here",
   "lbl_electric_fee": "Electric Fee",
@@ -215,7 +215,7 @@ final Map<String, String> enUs = {
   "msg_select_bank_to_send": "Select Bank To Send",
 
   // Bank To bank#Two Screen
-  "lbl_500": "\$500",
+  "lbl_500": "Ghc500",
 
   // Money Sent Success Screen
   "msg_money_sent_successfully": "Money Sent Successfully ",
@@ -225,18 +225,18 @@ final Map<String, String> enUs = {
   "lbl_recent": "Recent ",
 
   // Mobile Prepaid#Two Screen
-  "lbl_01704889390": "01704889390", "lbl_50": "\$50",
+  "lbl_01704889390": "01704889390", "lbl_50": "GHc50",
   "lbl_adom_shafi": "Adom Shafi",
 
   // Recharge Success Screen
   "msg_recharge_done_successfully": "Recharge Done Successfully ",
 
   // Common String
-  "lbl_0_00": "\$0.00",
+  "lbl_0_00": "GHc0.00",
   "lbl_159_107_1365": "159-107-1365",
   "lbl_25_jan": "25 Jan",
-  "lbl_31_250": "\$ 31,250",
-  "lbl_60_00": "\$60.00",
+  "lbl_31_250": "GHc 31,250",
+  "lbl_60_00": "GHc60.00",
   "lbl_a": "A",
   "lbl_activity": "Activity",
   "lbl_add_card": "Add Card",

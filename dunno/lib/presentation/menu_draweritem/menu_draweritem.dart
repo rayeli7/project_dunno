@@ -1,10 +1,9 @@
-import 'bloc/menu_bloc.dart';
 import 'package:dunno/core/app_export.dart';
 import 'package:dunno/widgets/custom_elevated_button.dart';
 import 'package:flutter/material.dart';
 
 class MenuDraweritem extends StatelessWidget {
-  const MenuDraweritem({Key? key}) : super(key: key);
+  const MenuDraweritem({super.key});
 
   @override
   Widget build(BuildContext context) {

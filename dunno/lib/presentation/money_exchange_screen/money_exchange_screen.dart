@@ -17,7 +17,7 @@ class MoneyExchangeScreen extends StatelessWidget {
         create: (context) => MoneyExchangeBloc(
             MoneyExchangeState(moneyExchangeModelObj: MoneyExchangeModel()))
           ..add(MoneyExchangeInitialEvent()),
-        child: MoneyExchangeScreen());
+        child: const MoneyExchangeScreen());
   }
 
   @override
@@ -126,7 +126,7 @@ class MoneyExchangeScreen extends StatelessWidget {
                               children: [
                                 Text("lbl_exchange_rate".tr,
                                     style: theme.textTheme.headlineMedium),
-                                Spacer(),
+                                const Spacer(),
                                 CustomImageView(
                                     imagePath: ImageConstant.imgEllipse110,
                                     height: getSize(30),
@@ -155,7 +155,7 @@ class MoneyExchangeScreen extends StatelessWidget {
                                 Text("lbl_country".tr,
                                     style: CustomTextStyles
                                         .titleMediumPrimaryContainer),
-                                Spacer(),
+                                const Spacer(),
                                 Text("lbl_usd".tr,
                                     style: CustomTextStyles
                                         .titleMediumPrimaryContainer),
@@ -185,15 +185,15 @@ class MoneyExchangeScreen extends StatelessWidget {
                                     padding: getPadding(left: 15),
                                     child: Text("lbl_vietnamese".tr,
                                         style: theme.textTheme.titleSmall)),
-                                Spacer(flex: 75),
+                                const Spacer(flex: 75),
                                 Text("lbl_1".tr,
                                     style: CustomTextStyles.bodyLargeGray900),
-                                Spacer(flex: 24),
+                                const Spacer(flex: 24),
                                 Text("lbl_1_746".tr,
                                     style:
                                         CustomTextStyles.titleMediumGreenA700)
                               ])),
-                      Padding(padding: getPadding(top: 15), child: Divider()),
+                      Padding(padding: getPadding(top: 15), child: const Divider()),
                       Padding(
                           padding: getPadding(top: 15),
                           child: Row(
@@ -208,7 +208,7 @@ class MoneyExchangeScreen extends StatelessWidget {
                                     padding: getPadding(left: 15, top: 2),
                                     child: Text("lbl_england".tr,
                                         style: theme.textTheme.titleSmall)),
-                                Spacer(),
+                                const Spacer(),
                                 Text("lbl_1".tr,
                                     style: CustomTextStyles.bodyLargeGray900),
                                 Padding(
@@ -217,7 +217,7 @@ class MoneyExchangeScreen extends StatelessWidget {
                                         style: CustomTextStyles
                                             .titleMediumGreenA700))
                               ])),
-                      Padding(padding: getPadding(top: 15), child: Divider()),
+                      Padding(padding: getPadding(top: 15), child: const Divider()),
                       Padding(
                           padding: getPadding(top: 15),
                           child: Row(
@@ -232,7 +232,7 @@ class MoneyExchangeScreen extends StatelessWidget {
                                     padding: getPadding(left: 16),
                                     child: Text("lbl_france".tr,
                                         style: theme.textTheme.titleSmall)),
-                                Spacer(),
+                                const Spacer(),
                                 Text("lbl_1".tr,
                                     style: CustomTextStyles.bodyLargeGray900),
                                 Padding(
@@ -241,7 +241,7 @@ class MoneyExchangeScreen extends StatelessWidget {
                                         style: CustomTextStyles
                                             .titleMediumGreenA700))
                               ])),
-                      Padding(padding: getPadding(top: 15), child: Divider()),
+                      Padding(padding: getPadding(top: 15), child: const Divider()),
                       Padding(
                           padding: getPadding(top: 15),
                           child: Row(
@@ -257,15 +257,15 @@ class MoneyExchangeScreen extends StatelessWidget {
                                     padding: getPadding(left: 16, top: 2),
                                     child: Text("lbl_afghanistan".tr,
                                         style: theme.textTheme.titleSmall)),
-                                Spacer(flex: 74),
+                                const Spacer(flex: 74),
                                 Text("lbl_1".tr,
                                     style: CustomTextStyles.bodyLargeGray900),
-                                Spacer(flex: 25),
+                                const Spacer(flex: 25),
                                 Text("lbl_1_746".tr,
                                     style:
                                         CustomTextStyles.titleMediumGreenA700)
                               ])),
-                      Padding(padding: getPadding(top: 15), child: Divider()),
+                      Padding(padding: getPadding(top: 15), child: const Divider()),
                       Padding(
                           padding: getPadding(top: 15),
                           child: Row(
@@ -287,7 +287,7 @@ class MoneyExchangeScreen extends StatelessWidget {
                                     padding: getPadding(left: 16, top: 2),
                                     child: Text("lbl_japan".tr,
                                         style: theme.textTheme.titleSmall)),
-                                Spacer(),
+                                const Spacer(),
                                 Text("lbl_1".tr,
                                     style: CustomTextStyles.bodyLargeGray900),
                                 Padding(
@@ -296,7 +296,7 @@ class MoneyExchangeScreen extends StatelessWidget {
                                         style: CustomTextStyles
                                             .titleMediumGreenA700))
                               ])),
-                      Padding(padding: getPadding(top: 15), child: Divider()),
+                      Padding(padding: getPadding(top: 15), child: const Divider()),
                       Padding(
                           padding: getPadding(top: 15),
                           child: Row(
@@ -311,15 +311,15 @@ class MoneyExchangeScreen extends StatelessWidget {
                                     padding: getPadding(left: 16),
                                     child: Text("lbl_korea".tr,
                                         style: theme.textTheme.titleSmall)),
-                                Spacer(flex: 79),
+                                const Spacer(flex: 79),
                                 Text("lbl_1".tr,
                                     style: CustomTextStyles.bodyLargeGray900),
-                                Spacer(flex: 20),
+                                const Spacer(flex: 20),
                                 Text("lbl_1_746".tr,
                                     style:
                                         CustomTextStyles.titleMediumGreenA700)
                               ])),
-                      Padding(padding: getPadding(top: 15), child: Divider()),
+                      Padding(padding: getPadding(top: 15), child: const Divider()),
                       Padding(
                           padding: getPadding(top: 15, bottom: 5),
                           child: Row(
@@ -341,10 +341,10 @@ class MoneyExchangeScreen extends StatelessWidget {
                                     padding: getPadding(left: 16),
                                     child: Text("lbl_china".tr,
                                         style: theme.textTheme.titleSmall)),
-                                Spacer(flex: 79),
+                                const Spacer(flex: 79),
                                 Text("lbl_1".tr,
                                     style: CustomTextStyles.bodyLargeGray900),
-                                Spacer(flex: 20),
+                                const Spacer(flex: 20),
                                 Text("lbl_1_746".tr,
                                     style:
                                         CustomTextStyles.titleMediumGreenA700)
@@ -362,7 +362,9 @@ class MoneyExchangeScreen extends StatelessWidget {
   ///
   /// This function returns a `Future` that completes with `void`.
   Future<void> onTapLocationone(BuildContext context) async {
+    // ignore: unused_local_variable
     var initialState = BlocProvider.of<MoneyExchangeBloc>(context).state;
+    // ignore: unused_local_variable
     DateTime? dateTime = await showDatePicker(
         context: context,
         initialDate: DateTime.now(),

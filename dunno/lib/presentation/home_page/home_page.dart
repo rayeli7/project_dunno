@@ -27,10 +27,10 @@ class HomePage extends StatelessWidget {
             appBar: CustomAppBar(
                 leadingWidth: getHorizontalSize(68),
                 leading: AppbarImage(
-                    svgPath: ImageConstant.imgGrid,
+                    imagePath: ImageConstant.imgAppLogo,
                     margin: getMargin(left: 24, top: 6, bottom: 6)),
                 title: AppbarTitle(
-                    text: "lbl_welcome_back".tr, margin: getMargin(left: 23))),
+                    text: "lbl_welcome".tr, margin: getMargin(left: 23))),
             body: Container(
                 width: double.maxFinite,
                 padding: getPadding(left: 24, top: 34, right: 24, bottom: 34),
@@ -48,43 +48,42 @@ class HomePage extends StatelessWidget {
                               children: [
                                 Text("lbl_total_balance".tr,
                                     style: CustomTextStyles.bodyLargeGray10001),
-                                Text("lbl_3_567_12".tr,
+                                Text("P_A_D",
                                     style:
                                         CustomTextStyles.displayMediumGray10001)
                               ])),
                       Expanded(
                           child: Padding(
                               padding: getPadding(left: 3, top: 50, right: 3),
-                              child:
-                                  BlocSelector<HomeBloc, HomeState, HomeModel?>(
-                                      selector: (state) => state.homeModelObj,
-                                      builder: (context, homeModelObj) {
-                                        return GridView.builder(
-                                            shrinkWrap: true,
-                                            gridDelegate:
-                                                SliverGridDelegateWithFixedCrossAxisCount(
-                                                    mainAxisExtent:
-                                                        getVerticalSize(201),
-                                                    crossAxisCount: 2,
-                                                    mainAxisSpacing:
-                                                        getHorizontalSize(24),
-                                                    crossAxisSpacing:
-                                                        getHorizontalSize(24)),
-                                            physics: const BouncingScrollPhysics(),
-                                            itemCount: homeModelObj
-                                                    ?.optionsItemList.length ??
-                                                0,
-                                            itemBuilder: (context, index) {
-                                              OptionsItemModel model =
-                                                  homeModelObj?.optionsItemList[
-                                                          index] ??
-                                                      OptionsItemModel();
-                                              return OptionsItemWidget(model,
-                                                  onTapOne: () {
-                                                onTapOne(context);
-                                              });
-                                            });
-                                      })))
+                              child: BlocSelector<HomeBloc, HomeState,
+                                      HomeModel?>(
+                                  selector: (state) => state.homeModelObj,
+                                  builder: (context, homeModelObj) {
+                                    return GridView.builder(
+                                        shrinkWrap: true,
+                                        gridDelegate:
+                                            SliverGridDelegateWithFixedCrossAxisCount(
+                                                mainAxisExtent:
+                                                    getVerticalSize(201),
+                                                crossAxisCount: 2,
+                                                mainAxisSpacing:
+                                                    getHorizontalSize(24),
+                                                crossAxisSpacing:
+                                                    getHorizontalSize(24)),
+                                        physics: const BouncingScrollPhysics(),
+                                        itemCount: homeModelObj
+                                                ?.optionsItemList.length ??
+                                            0,
+                                        itemBuilder: (context, index) {
+                                          OptionsItemModel model = homeModelObj
+                                                  ?.optionsItemList[index] ??
+                                              OptionsItemModel();
+                                          return OptionsItemWidget(model,
+                                              onTapOne: () {
+                                            onTapOne(context);
+                                          });
+                                        });
+                                  })))
                     ]))));
   }
 

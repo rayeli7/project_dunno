@@ -94,6 +94,9 @@ class CustomTextStyles {
   static get displayMediumGray10001 => theme.textTheme.displayMedium!.copyWith(
         color: appTheme.gray10001,
       );
+      static get displayMediumBlack900 => theme.textTheme.displayMedium!.copyWith(
+        color: appTheme.black900,
+      );
   // Headline text style
   static get headlineLargeGray900 => theme.textTheme.headlineLarge!.copyWith(
         color: appTheme.gray900,
