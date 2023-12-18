@@ -1,3 +1,5 @@
+import 'package:dunno/presentation/cards_screen/cards_screen.dart';
+
 import '../home_page/widgets/options_item_widget.dart';
 import 'bloc/home_bloc.dart';
 import 'models/home_model.dart';
@@ -13,8 +15,9 @@ class HomePage extends StatelessWidget {
 
   static Widget builder(BuildContext context) {
     return BlocProvider<HomeBloc>(
-        create: (context) => HomeBloc(HomeState(homeModelObj: HomeModel()))
-          ..add(HomeInitialEvent()),
+        create: (context) =>
+            HomeBloc(HomeState(homeModelObj: const HomeModel()))
+              ..add(HomeInitialEvent()),
         child: const HomePage());
   }
 
@@ -37,18 +40,25 @@ class HomePage extends StatelessWidget {
                 child: Column(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
+                      Padding(
+                          padding: getPadding(left: 3, top: 3, right: 3),
+                          child: BlocSelector<HomeBloc, HomeState, HomeModel?>(
+                              selector: (state) => state.homeModelObj,
+                              builder: (context, homeModelObj) {
+                                return const CardsScreen();
+                              })),
                       Container(
                           width: getHorizontalSize(360),
                           margin: getMargin(right: 6),
                           padding: getPadding(
-                              left: 90, top: 17, right: 90, bottom: 17),
+                              left: 30, top: 17, right: 30, bottom: 17),
                           decoration: AppDecoration.fillPrimary,
                           child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Text("lbl_total_balance".tr,
                                     style: CustomTextStyles.bodyLargeGray10001),
-                                Text("P_A_D",
+                                Text("GHC 1,300",
                                     style:
                                         CustomTextStyles.displayMediumGray10001)
                               ])),

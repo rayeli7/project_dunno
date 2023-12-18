@@ -2,12 +2,10 @@ import 'bloc/home_container_bloc.dart';
 import 'models/home_container_model.dart';
 import 'package:dunno/core/app_export.dart';
 import 'package:dunno/presentation/activity_screen/activity_screen.dart';
-import 'package:dunno/presentation/cards_screen/cards_screen.dart';
 import 'package:dunno/presentation/home_page/home_page.dart';
 import 'package:dunno/presentation/profile_screen/profile_screen.dart';
 import 'package:dunno/widgets/custom_bottom_bar.dart';
 import 'package:flutter/material.dart';
-
 
 class HomeContainerScreen extends StatelessWidget {
   HomeContainerScreen({super.key});
@@ -71,8 +69,6 @@ class HomeContainerScreen extends StatelessWidget {
     switch (currentRoute) {
       case AppRoutes.homePage:
         return HomePage.builder(context);
-      case AppRoutes.cardsScreen:
-        return CardsScreen.builder(context);
       case AppRoutes.activityScreen:
         return ActivityScreen.builder(context);
       case AppRoutes.profileScreen:

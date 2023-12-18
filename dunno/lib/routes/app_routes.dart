@@ -118,7 +118,6 @@ class AppRoutes {
         logInScreen: LogInScreen.builder,
         signUpScreen: SignUpScreen.builder,
         homeContainerScreen: HomeContainerScreen.builder,
-        cardsScreen: CardsScreen.builder,
         cardDetailsScreen: CardDetailsScreen.builder,
         activityScreen: ActivityScreen.builder,
         profileScreen: ProfileScreen.builder,

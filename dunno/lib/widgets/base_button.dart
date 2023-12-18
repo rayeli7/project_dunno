@@ -1,9 +1,10 @@
+// ignore: unused_import
 import 'package:dunno/core/app_export.dart';
 import 'package:flutter/material.dart';
 
 class BaseButton extends StatelessWidget {
-  BaseButton({
-    Key? key,
+  const BaseButton({
+    super.key,
     required this.text,
     this.onTap,
     this.buttonStyle,
@@ -13,9 +14,7 @@ class BaseButton extends StatelessWidget {
     this.width,
     this.margin,
     this.alignment,
-  }) : super(
-          key: key,
-        );
+  });
 
   final String text;
 

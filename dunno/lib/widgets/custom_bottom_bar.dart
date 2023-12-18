@@ -23,12 +23,6 @@ class CustomBottomBarState extends State<CustomBottomBar> {
       type: BottomBarEnum.Home,
     ),
     BottomMenuModel(
-      icon: ImageConstant.imgNavcard,
-      activeIcon: ImageConstant.imgNavcard,
-      title: "lbl_card".tr,
-      type: BottomBarEnum.Card,
-    ),
-    BottomMenuModel(
       icon: ImageConstant.imgNavactivity,
       activeIcon: ImageConstant.imgNavactivity,
       title: "lbl_activity".tr,
@@ -112,7 +106,6 @@ class CustomBottomBarState extends State<CustomBottomBar> {
 
 enum BottomBarEnum {
   Home,
-  Card,
   Activity,
   Profile,
 }

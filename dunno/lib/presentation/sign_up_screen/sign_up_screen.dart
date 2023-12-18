@@ -248,8 +248,7 @@ class SignUpScreen extends StatelessWidget {
                 .read<SignUpBloc>()
                 .postRegisterDeviceAuthResp
                 .message
-                .toString() ??
-            '');
+                .toString());
   }
 
   /// Performs a Google sign-in and returns a [GoogleUser] object.

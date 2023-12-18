@@ -1,24 +1,17 @@
 import 'bloc/activity_bloc.dart';
 import 'models/activity_model.dart';
 import 'package:dunno/core/app_export.dart';
-import 'package:dunno/presentation/activity_screen/activity_screen.dart';
-import 'package:dunno/presentation/cards_screen/cards_screen.dart';
-import 'package:dunno/presentation/home_page/home_page.dart';
-import 'package:dunno/presentation/profile_screen/profile_screen.dart';
 import 'package:dunno/widgets/app_bar/appbar_image.dart';
 import 'package:dunno/widgets/app_bar/appbar_title.dart';
 import 'package:dunno/widgets/app_bar/custom_app_bar.dart';
-import 'package:dunno/widgets/custom_bottom_bar.dart';
 import 'package:dunno/widgets/custom_elevated_button.dart';
 import 'package:dunno/widgets/custom_icon_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg_provider/flutter_svg_provider.dart' as fs;
 
+// ignore: must_be_immutable
 class ActivityScreen extends StatelessWidget {
-  ActivityScreen({Key? key})
-      : super(
-          key: key,
-        );
+  ActivityScreen({super.key});
 
   GlobalKey<NavigatorState> navigatorKey = GlobalKey();
 
@@ -44,7 +37,7 @@ class ActivityScreen extends StatelessWidget {
             appBar: CustomAppBar(
               leadingWidth: getHorizontalSize(68),
               leading: AppbarImage(
-                svgPath: ImageConstant.imgGrid,
+                imagePath: ImageConstant.imgAppLogo,
                 margin: getMargin(
                   left: 24,
                   top: 6,
@@ -140,7 +133,7 @@ class ActivityScreen extends StatelessWidget {
                                             CustomTextStyles.bodyLargeGray90017,
                                       ),
                                     ),
-                                    Spacer(),
+                                    const Spacer(),
                                     CustomImageView(
                                       svgPath: ImageConstant.imgStockholmicons,
                                       height: getSize(24),
@@ -252,7 +245,7 @@ class ActivityScreen extends StatelessWidget {
                                   style: CustomTextStyles
                                       .headlineMediumExtraBold_1,
                                 ),
-                                Spacer(),
+                                const Spacer(),
                                 Padding(
                                   padding: getPadding(
                                     top: 10,
@@ -310,7 +303,7 @@ class ActivityScreen extends StatelessWidget {
                                           .titleMediumSemiBold17,
                                     ),
                                   ),
-                                  Spacer(),
+                                  const Spacer(),
                                   Column(
                                     crossAxisAlignment: CrossAxisAlignment.end,
                                     mainAxisAlignment: MainAxisAlignment.start,
@@ -461,50 +454,9 @@ class ActivityScreen extends StatelessWidget {
                 ),
               ),
             ),
-            bottomNavigationBar: CustomBottomBar(
-              onChanged: (BottomBarEnum type) {
-                Navigator.pushNamed(
-                    navigatorKey.currentContext!, getCurrentRoute(type));
-              },
-            ),
           ),
         );
       },
     );
-  }
-
-  ///Handling route based on bottom click actions
-  String getCurrentRoute(BottomBarEnum type) {
-    switch (type) {
-      case BottomBarEnum.Home:
-        return AppRoutes.homePage;
-      case BottomBarEnum.Card:
-        return AppRoutes.cardsScreen;
-      case BottomBarEnum.Activity:
-        return AppRoutes.activityScreen;
-      case BottomBarEnum.Profile:
-        return AppRoutes.profileScreen;
-      default:
-        return "/";
-    }
-  }
-
-  ///Handling page based on route
-  Widget getCurrentPage(
-    BuildContext context,
-    String currentRoute,
-  ) {
-    switch (currentRoute) {
-      case AppRoutes.homePage:
-        return HomePage.builder(context);
-      case AppRoutes.cardsScreen:
-        return CardsScreen.builder(context);
-      case AppRoutes.activityScreen:
-        return ActivityScreen.builder(context);
-      case AppRoutes.profileScreen:
-        return ProfileScreen.builder(context);
-      default:
-        return DefaultWidget();
-    }
   }
 }

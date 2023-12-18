@@ -178,6 +178,7 @@ class EditProfileScreen extends StatelessWidget {
   onTapProfile(BuildContext context) async {
     await PermissionManager.askForPermission(Permission.camera);
     await PermissionManager.askForPermission(Permission.storage);
+    // ignore: unused_local_variable
     List<String?>? imageList = [];
     await FileManager().showModelSheetForImage(getImages: (value) async {
       imageList = value;

@@ -16,7 +16,7 @@ class ReceiveMoneyRequestPage extends StatefulWidget {
         create: (context) => ReceiveMoneyRequestBloc(ReceiveMoneyRequestState(
             receiveMoneyRequestModelObj: ReceiveMoneyRequestModel()))
           ..add(ReceiveMoneyRequestInitialEvent()),
-        child: ReceiveMoneyRequestPage());
+        child: const ReceiveMoneyRequestPage());
   }
 }
 
@@ -29,6 +29,7 @@ class ReceiveMoneyRequestPageState extends State<ReceiveMoneyRequestPage>
   bool get wantKeepAlive => true;
   @override
   Widget build(BuildContext context) {
+    super.build(context);
     mediaQueryData = MediaQuery.of(context);
     return SafeArea(
         child: Scaffold(
