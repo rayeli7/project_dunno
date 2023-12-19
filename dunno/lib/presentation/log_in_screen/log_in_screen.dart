@@ -38,11 +38,12 @@ class LogInScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           CustomImageView(
-                              svgPath: ImageConstant.imgGlobe,
+                              imagePath: ImageConstant.imgSplash,
+                              fit: BoxFit.contain,
                               height: getSize(80),
-                              width: getSize(80)),
+                              width: getSize(180)),
                           Padding(
-                              padding: getPadding(top: 55),
+                              padding: getPadding(top: 5),
                               child: Text("lbl_hello".tr,
                                   style: CustomTextStyles.displayMediumBold)),
                           Padding(

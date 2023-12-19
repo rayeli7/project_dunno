@@ -9,11 +9,10 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:dunno/domain/googleauth/google_auth_helper.dart';
 
-// ignore_for_file: must_be_immutable
 class SignUpScreen extends StatelessWidget {
-  SignUpScreen({Key? key}) : super(key: key);
+  SignUpScreen({super.key});
 
-  GlobalKey<FormState> _formKey = GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
 
   static Widget builder(BuildContext context) {
     return BlocProvider<SignUpBloc>(
@@ -41,12 +40,13 @@ class SignUpScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           CustomImageView(
-                              svgPath: ImageConstant.imgGlobe,
-                              height: getSize(80),
-                              width: getSize(80),
+                              imagePath: ImageConstant.imgAppLogo,
+                              fit: BoxFit.contain,
+                              height: getSize(200),
+                              width: getSize(200),
                               alignment: Alignment.center),
                           Padding(
-                              padding: getPadding(top: 61),
+                              padding: getPadding(top: 10),
                               child: Text("lbl_phone_or_email".tr,
                                   style: CustomTextStyles.bodyLargeGray700)),
                           BlocSelector<SignUpBloc, SignUpState,
@@ -245,10 +245,10 @@ class SignUpScreen extends StatelessWidget {
   void _onRegisterDeviceAuthEventError(BuildContext context) {
     Fluttertoast.showToast(
         msg: context
-                .read<SignUpBloc>()
-                .postRegisterDeviceAuthResp
-                .message
-                .toString());
+            .read<SignUpBloc>()
+            .postRegisterDeviceAuthResp
+            .message
+            .toString());
   }
 
   /// Performs a Google sign-in and returns a [GoogleUser] object.

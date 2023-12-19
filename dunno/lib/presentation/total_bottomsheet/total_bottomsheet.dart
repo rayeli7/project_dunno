@@ -6,13 +6,13 @@ import 'package:dunno/widgets/custom_outlined_button.dart';
 import 'package:flutter/material.dart';
 
 class TotalBottomsheet extends StatelessWidget {
-  const TotalBottomsheet({Key? key}) : super(key: key);
+  const TotalBottomsheet({super.key});
 
   static Widget builder(BuildContext context) {
     return BlocProvider<TotalBloc>(
         create: (context) => TotalBloc(TotalState(totalModelObj: TotalModel()))
           ..add(TotalInitialEvent()),
-        child: TotalBottomsheet());
+        child: const TotalBottomsheet());
   }
 
   @override

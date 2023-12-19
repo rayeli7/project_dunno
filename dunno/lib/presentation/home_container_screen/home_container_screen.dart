@@ -17,10 +17,9 @@ class HomeContainerScreen extends StatelessWidget {
     //   ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
     return BlocProvider<HomeContainerBloc>(
         create: (context) => HomeContainerBloc(HomeContainerState(
-              homeContainerModelObj: HomeContainerModel(),
-              // id: arg[NavigationArgs.id]
-            ))
-              ..add(HomeContainerInitialEvent()),
+            homeContainerModelObj: HomeContainerModel(),
+            id: [NavigationArgs.id]))
+          ..add(HomeContainerInitialEvent()),
         child: HomeContainerScreen());
   }
 

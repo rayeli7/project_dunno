@@ -23,7 +23,7 @@ class CardsScreen extends StatelessWidget {
             }),
       ),
       Container(
-          margin: getMargin(top: 36, bottom: 5),
+          margin: getMargin(top: 5, bottom: 5),
           padding: getPadding(left: 24, top: 22, right: 24, bottom: 22),
           decoration: AppDecoration.gradientTealToTeal,
           child: Column(

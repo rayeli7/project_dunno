@@ -1,5 +1,3 @@
-// ignore_for_file: must_be_immutable
-
 part of 'log_in_bloc.dart';
 
 /// Abstract class for all events that can be dispatched from the
@@ -22,9 +20,9 @@ class CreateLoginEvent extends LogInEvent {
     this.onCreateLoginEventError,
   });
 
-  Function? onCreateLoginEventSuccess;
+  final Function? onCreateLoginEventSuccess;
 
-  Function? onCreateLoginEventError;
+  final Function? onCreateLoginEventError;
 
   @override
   List<Object?> get props => [

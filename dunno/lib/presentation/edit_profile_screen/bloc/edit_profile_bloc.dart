@@ -11,7 +11,7 @@ part 'edit_profile_state.dart';
 
 /// A bloc that manages the state of a EditProfile according to the event that is dispatched to it.
 class EditProfileBloc extends Bloc<EditProfileEvent, EditProfileState> {
-  EditProfileBloc(EditProfileState initialState) : super(initialState) {
+  EditProfileBloc(super.initialState) {
     on<EditProfileInitialEvent>(_onInitialize);
     on<FetchMeEvent>(_callFetchMe);
   }

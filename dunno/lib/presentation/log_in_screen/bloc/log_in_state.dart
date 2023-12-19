@@ -1,20 +1,18 @@
-// ignore_for_file: must_be_immutable
-
 part of 'log_in_bloc.dart';
 
 /// Represents the state of LogIn in the application.
 class LogInState extends Equatable {
-  LogInState({
+  const LogInState({
     this.phoneController,
     this.passwordController,
     this.logInModelObj,
   });
 
-  TextEditingController? phoneController;
+  final TextEditingController? phoneController;
 
-  TextEditingController? passwordController;
+  final TextEditingController? passwordController;
 
-  LogInModel? logInModelObj;
+  final LogInModel? logInModelObj;
 
   @override
   List<Object?> get props => [

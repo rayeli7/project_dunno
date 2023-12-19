@@ -1,6 +1,5 @@
 final Map<String, String> enUs = {
   // Onboarding Screen
-  "lbl_banking": "Banking",
   "lbl_start_now": "Start Now",
   "msg_online_digital": "Online & Digital",
   "msg_we_help_our_user":
@@ -9,7 +8,7 @@ final Map<String, String> enUs = {
   // Log In Screen
   "lbl_hello": "Hello!",
   "lbl_sign_in": "Sign In",
-  "msg_enter_your_detail": "Enter Your Detail Below",
+  "msg_enter_your_detail": "Enter Your Details Below",
   "msg_sign_in_with_google": "Sign in with Google",
 
   // Sign up Screen
@@ -263,7 +262,7 @@ final Map<String, String> enUs = {
   "lbl_email": "Email",
   "lbl_first_name": "First Name",
   "lbl_from": "From",
-  "lbl_have_account": "Have Account?",
+  "lbl_have_account": "Don't Have An Account?",
   "lbl_history": "History",
   "lbl_home": "Home",
   "lbl_kate_morgan": "Kate Morgan",
