@@ -2,11 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'core/app_export.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart'; // Import your generated configuration file
+
 
 var globalMessengerKey = GlobalKey<ScaffoldMessengerState>();
-void main() {
-  WidgetsFlutterBinding.ensureInitialized();
-  Future.wait([
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized(); 
+  await Future.wait([
+    Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  ),// Initialize Firebase first
     SystemChrome.setPreferredOrientations([
       DeviceOrientation.portraitUp,
     ]),

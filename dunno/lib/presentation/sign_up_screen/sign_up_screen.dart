@@ -35,181 +35,188 @@ class SignUpScreen extends StatelessWidget {
                     width: double.maxFinite,
                     padding:
                         getPadding(left: 27, top: 40, right: 27, bottom: 40),
-                    child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          CustomImageView(
-                              imagePath: ImageConstant.imgAppLogo,
-                              fit: BoxFit.contain,
-                              height: getSize(200),
-                              width: getSize(200),
-                              alignment: Alignment.center),
-                          Padding(
-                              padding: getPadding(top: 10),
-                              child: Text("lbl_phone_or_email".tr,
-                                  style: CustomTextStyles.bodyLargeGray700)),
-                          BlocSelector<SignUpBloc, SignUpState,
-                                  TextEditingController?>(
-                              selector: (state) => state.phoneController,
-                              builder: (context, phoneController) {
-                                return CustomTextFormField(
-                                    controller: phoneController,
-                                    margin: getMargin(top: 5),
-                                    hintText: "lbl_email".tr,
-                                    hintStyle:
-                                        CustomTextStyles.bodyLargeGray70018,
-                                    textInputType: TextInputType.emailAddress,
-                                    prefix: Container(
-                                        margin: getMargin(
-                                            left: 25,
-                                            top: 24,
-                                            right: 10,
-                                            bottom: 24),
-                                        child: CustomImageView(
-                                            svgPath:
-                                                ImageConstant.imgArrowdown)),
-                                    prefixConstraints: BoxConstraints(
-                                        maxHeight: getVerticalSize(72)),
-                                    validator: (value) {
-                                      if (value == null ||
-                                          (!isValidEmail(value,
-                                              isRequired: true))) {
-                                        return "Please enter valid email";
-                                      }
-                                      return null;
-                                    },
-                                    contentPadding: getPadding(
-                                        top: 24, right: 30, bottom: 24),
-                                    borderDecoration: TextFormFieldStyleHelper
-                                        .outlinePrimaryContainer);
-                              }),
-                          Padding(
-                              padding: getPadding(top: 25),
-                              child: Text("lbl_set_password".tr,
-                                  style: CustomTextStyles.bodyLargeGray700)),
-                          BlocSelector<SignUpBloc, SignUpState,
-                                  TextEditingController?>(
-                              selector: (state) => state.passwordController,
-                              builder: (context, passwordController) {
-                                return CustomTextFormField(
-                                    controller: passwordController,
-                                    margin: getMargin(top: 9),
-                                    hintText: "lbl_set_password".tr,
-                                    hintStyle:
-                                        CustomTextStyles.bodyLargeGray70018,
-                                    textInputType:
-                                        TextInputType.visiblePassword,
-                                    prefix: Container(
-                                        margin: getMargin(
-                                            left: 25,
-                                            top: 24,
-                                            right: 10,
-                                            bottom: 24),
-                                        child: CustomImageView(
-                                            svgPath: ImageConstant.imgLock)),
-                                    prefixConstraints: BoxConstraints(
-                                        maxHeight: getVerticalSize(72)),
-                                    validator: (value) {
-                                      if (value == null ||
-                                          (!isValidPassword(value,
-                                              isRequired: true))) {
-                                        return "Please enter valid password";
-                                      }
-                                      return null;
-                                    },
-                                    obscureText: true,
-                                    contentPadding: getPadding(
-                                        top: 24, right: 30, bottom: 24),
-                                    borderDecoration: TextFormFieldStyleHelper
-                                        .outlinePrimaryContainer);
-                              }),
-                          Padding(
-                              padding: getPadding(top: 25),
-                              child: Text("msg_confirm_password".tr,
-                                  style: CustomTextStyles.bodyLargeGray700)),
-                          BlocSelector<SignUpBloc, SignUpState,
-                                  TextEditingController?>(
-                              selector: (state) =>
-                                  state.confirmpasswordController,
-                              builder: (context, confirmpasswordController) {
-                                return CustomTextFormField(
-                                    controller: confirmpasswordController,
-                                    margin: getMargin(top: 9),
-                                    hintText: "msg_confirm_password".tr,
-                                    hintStyle:
-                                        CustomTextStyles.bodyLargeGray70018,
-                                    textInputAction: TextInputAction.done,
-                                    textInputType:
-                                        TextInputType.visiblePassword,
-                                    prefix: Container(
-                                        margin: getMargin(
-                                            left: 28,
-                                            top: 24,
-                                            right: 10,
-                                            bottom: 24),
-                                        child: CustomImageView(
-                                            svgPath: ImageConstant.imgLock)),
-                                    prefixConstraints: BoxConstraints(
-                                        maxHeight: getVerticalSize(72)),
-                                    validator: (value) {
-                                      if (value == null ||
-                                          (!isValidPassword(value,
-                                              isRequired: true))) {
-                                        return "Please enter valid password";
-                                      }
-                                      return null;
-                                    },
-                                    obscureText: true,
-                                    contentPadding: getPadding(
-                                        top: 24, right: 30, bottom: 24),
-                                    borderDecoration: TextFormFieldStyleHelper
-                                        .outlinePrimaryContainer);
-                              }),
-                          CustomElevatedButton(
-                              height: getVerticalSize(72),
-                              text: "lbl_sign_up2".tr,
-                              margin: getMargin(top: 41),
-                              buttonTextStyle: CustomTextStyles
-                                  .titleMediumOnPrimarySemiBold18,
-                              onTap: () {
-                                onTapSignup(context);
-                              }),
-                          CustomOutlinedButton(
-                              text: "msg_sign_up_with_google".tr,
-                              margin: getMargin(top: 40),
-                              leftIcon: Container(
-                                  margin: getMargin(right: 16),
-                                  child: CustomImageView(
-                                      svgPath: ImageConstant.imgGoogle)),
-                              onTap: () {
-                                onTapSignupwith(context);
-                              }),
-                          Align(
-                              alignment: Alignment.center,
-                              child: Padding(
-                                  padding: getPadding(top: 34, bottom: 5),
-                                  child: Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Padding(
-                                            padding: getPadding(bottom: 2),
-                                            child: Text("lbl_have_account".tr,
-                                                style: CustomTextStyles
-                                                    .titleLargeBluegray700)),
-                                        GestureDetector(
-                                            onTap: () {
-                                              onTapTxtSignin(context);
-                                            },
-                                            child: Padding(
-                                                padding:
-                                                    getPadding(left: 8, top: 2),
-                                                child: Text("lbl_sign_in2".tr,
-                                                    style: CustomTextStyles
-                                                        .titleLargePrimary)))
-                                      ])))
-                        ])))));
+                    child: SingleChildScrollView(
+                      child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            CustomImageView(
+                                imagePath: ImageConstant.imgAppLogo,
+                                fit: BoxFit.contain,
+                                height: getSize(200),
+                                width: getSize(200),
+                                alignment: Alignment.center),
+                            Padding(
+                                padding: getPadding(top: 10),
+                                child: Text("lbl_phone_or_email".tr,
+                                    style: CustomTextStyles.bodyLargeGray700)),
+                            BlocSelector<SignUpBloc, SignUpState,
+                                    TextEditingController?>(
+                                selector: (state) => state.phoneController,
+                                builder: (context, phoneController) {
+                                  return CustomTextFormField(
+                                      controller: phoneController,
+                                      margin: getMargin(top: 5),
+                                      hintText: "lbl_email".tr,
+                                      hintStyle:
+                                          CustomTextStyles.bodyLargeGray70018,
+                                      textInputType: TextInputType.emailAddress,
+                                      prefix: Container(
+                                          margin: getMargin(
+                                              left: 25,
+                                              top: 24,
+                                              right: 10,
+                                              bottom: 24),
+                                          child: CustomImageView(
+                                              svgPath:
+                                                  ImageConstant.imgArrowdown)),
+                                      prefixConstraints: BoxConstraints(
+                                          maxHeight: getVerticalSize(72)),
+                                      validator: (value) {
+                                        if (value == null ||
+                                            (!isValidEmail(value,
+                                                isRequired: true))) {
+                                          return "Please enter valid email";
+                                        }
+                                        return null;
+                                      },
+                                      contentPadding: getPadding(
+                                          top: 24, right: 30, bottom: 24),
+                                      borderDecoration: TextFormFieldStyleHelper
+                                          .outlinePrimaryContainer);
+                                }),
+                            Padding(
+                                padding: getPadding(top: 25),
+                                child: Text("lbl_set_password".tr,
+                                    style: CustomTextStyles.bodyLargeGray700)),
+                            BlocSelector<SignUpBloc, SignUpState,
+                                    TextEditingController?>(
+                                selector: (state) => state.passwordController,
+                                builder: (context, passwordController) {
+                                  return CustomTextFormField(
+                                      controller: passwordController,
+                                      margin: getMargin(top: 9),
+                                      hintText: "lbl_set_password".tr,
+                                      hintStyle:
+                                          CustomTextStyles.bodyLargeGray70018,
+                                      textInputType:
+                                          TextInputType.visiblePassword,
+                                      prefix: Container(
+                                          margin: getMargin(
+                                              left: 25,
+                                              top: 24,
+                                              right: 10,
+                                              bottom: 24),
+                                          child: CustomImageView(
+                                              svgPath: ImageConstant.imgLock)),
+                                      prefixConstraints: BoxConstraints(
+                                          maxHeight: getVerticalSize(72)),
+                                      validator: (value) {
+                                        if (value == null ||
+                                            (!isValidPassword(value,
+                                                isRequired: true))) {
+                                          return "Please enter valid password";
+                                        }
+                                        return null;
+                                      },
+                                      obscureText: true,
+                                      contentPadding: getPadding(
+                                          top: 24, right: 30, bottom: 24),
+                                      borderDecoration: TextFormFieldStyleHelper
+                                          .outlinePrimaryContainer);
+                                }),
+                            Padding(
+                                padding: getPadding(top: 25),
+                                child: Text("msg_confirm_password".tr,
+                                    style: CustomTextStyles.bodyLargeGray700)),
+                            BlocSelector<SignUpBloc, SignUpState,
+                                    TextEditingController?>(
+                                selector: (state) =>
+                                    state.confirmpasswordController,
+                                builder: (context, confirmpasswordController) {
+                                  return CustomTextFormField(
+                                      controller: confirmpasswordController,
+                                      margin: getMargin(top: 9),
+                                      hintText: "msg_confirm_password".tr,
+                                      hintStyle:
+                                          CustomTextStyles.bodyLargeGray70018,
+                                      textInputAction: TextInputAction.done,
+                                      textInputType:
+                                          TextInputType.visiblePassword,
+                                      prefix: Container(
+                                          margin: getMargin(
+                                              left: 28,
+                                              top: 24,
+                                              right: 10,
+                                              bottom: 24),
+                                          child: CustomImageView(
+                                              svgPath: ImageConstant.imgLock)),
+                                      prefixConstraints: BoxConstraints(
+                                          maxHeight: getVerticalSize(72)),
+                                      validator: (value) {
+                                        if (value == null ||
+                                            (!isValidPassword(value,
+                                                isRequired: true))) {
+                                          return "Please enter valid password";
+                                        }
+                                        return null;
+                                      },
+                                      obscureText: true,
+                                      contentPadding: getPadding(
+                                          top: 24, right: 30, bottom: 24),
+                                      borderDecoration: TextFormFieldStyleHelper
+                                          .outlinePrimaryContainer);
+                                }),
+                            CustomElevatedButton(
+                                height: getVerticalSize(72),
+                                text: "lbl_sign_up2".tr,
+                                margin: getMargin(top: 41),
+                                buttonTextStyle: CustomTextStyles
+                                    .titleMediumOnPrimarySemiBold18,
+                                onTap: () {
+                                  onTapSignup(context);
+                                }),
+                            CustomOutlinedButton(
+                                width: double.infinity,
+                                text: "msg_sign_up_with_google".tr,
+                                margin: getMargin(top: 40),
+                                leftIcon: Container(
+                                    margin: getMargin(right: 16),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(8.0),
+                                      child: CustomImageView(
+                                          svgPath: ImageConstant.imgGoogle),
+                                    )),
+                                onTap: () {
+                                  onTapSignupwith(context);
+                                }),
+                            Align(
+                                alignment: Alignment.center,
+                                child: Padding(
+                                    padding: getPadding(top: 34, bottom: 5),
+                                    child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.center,
+                                        children: [
+                                          Padding(
+                                              padding: getPadding(bottom: 2),
+                                              child: Text("lbl_have_account".tr,
+                                                  style: CustomTextStyles
+                                                      .titleLargeBluegray700)),
+                                          GestureDetector(
+                                              onTap: () {
+                                                onTapTxtSignin(context);
+                                              },
+                                              child: Padding(
+                                                  padding: getPadding(
+                                                      left: 8, top: 2),
+                                                  child: Text("lbl_sign_in2".tr,
+                                                      style: CustomTextStyles
+                                                          .titleLargePrimary)))
+                                        ])))
+                          ]),
+                    )))));
   }
 
   /// Calls the https://nodedemo.dhiwise.co/device/auth/register API and triggers a [CreateRegisterEvent] event on the [SignUpBloc] bloc.

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "840606477535",
+    "project_id": "dunno-dae3f",
+    "storage_bucket": "dunno-dae3f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:840606477535:android:cf198e32047a0ae7a9cd6a",
+        "android_client_info": {
+          "package_name": "com.dunno.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHlqBgmmTb7vyYf3e1RnOOlLRh9pIuSyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

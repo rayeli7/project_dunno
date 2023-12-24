@@ -12,7 +12,7 @@ part 'sign_up_state.dart';
 
 /// A bloc that manages the state of a SignUp according to the event that is dispatched to it.
 class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
-  SignUpBloc(SignUpState initialState) : super(initialState) {
+  SignUpBloc(super.initialState) {
     on<SignUpInitialEvent>(_onInitialize);
     on<CreateRegisterEvent>(_callRegisterDeviceAuth);
   }

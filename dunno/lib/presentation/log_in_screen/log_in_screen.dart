@@ -53,10 +53,10 @@ class LogInScreen extends StatelessWidget {
                           Align(
                               alignment: Alignment.centerLeft,
                               child: Padding(
-                                  padding: getPadding(top: 36),
+                                  padding: getPadding(top: 15),
                                   child: Text("lbl_phone_or_email".tr,
-                                      style:
-                                          CustomTextStyles.bodyLargeGray700))),
+                                      style: CustomTextStyles
+                                          .bodyLargeGray700))),
                           BlocSelector<LogInBloc, LogInState,
                                   TextEditingController?>(
                               selector: (state) => state.phoneController,
@@ -71,7 +71,7 @@ class LogInScreen extends StatelessWidget {
                                     prefix: Container(
                                         margin: getMargin(
                                             left: 25,
-                                            top: 24,
+                                            top: 14,
                                             right: 10,
                                             bottom: 24),
                                         child: CustomImageView(
@@ -88,7 +88,7 @@ class LogInScreen extends StatelessWidget {
                                       return null;
                                     },
                                     contentPadding: getPadding(
-                                        top: 24, right: 30, bottom: 24),
+                                        top: 14, right: 30, bottom: 24),
                                     borderDecoration: TextFormFieldStyleHelper
                                         .outlinePrimaryContainer);
                               }),
@@ -97,8 +97,8 @@ class LogInScreen extends StatelessWidget {
                               child: Padding(
                                   padding: getPadding(top: 25),
                                   child: Text("lbl_password".tr,
-                                      style:
-                                          CustomTextStyles.bodyLargeGray700))),
+                                      style: CustomTextStyles
+                                          .bodyLargeGray700))),
                           BlocSelector<LogInBloc, LogInState,
                                   TextEditingController?>(
                               selector: (state) => state.passwordController,
